@@ -32,7 +32,7 @@ include_once 'vendor/showdata_forpeople.php';
               <table class="table table-striped b-t text-small">
                 <thead>
                   <tr>
-                    <th width="20px">На главной</th>
+                    <th width="10px">На главной</th>
                     <th width="10px">Порядок</th>
                     <th width="20px">Изменить</th>
                     <th>Название работы</th>
