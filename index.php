@@ -2,7 +2,6 @@
 //  Подключение хэдера
 include_once('template/header.php');
 ?>
-
 <div id="colorlib-page">
   <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 
