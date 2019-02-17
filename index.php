@@ -2,18 +2,18 @@
 //  Подключение хэдера
 include_once('template/header.php');
 ?>
-<script>
-    function loop() {
-        var i, n, s = '';
-        for (i = 0; i < 10; i++) {
-            n = Math.floor(Math.sin((Date.now()/200) + (i/2)) * 4) + 4;
-            s += String.fromCharCode(0x2581 + n);
-        }
-        window.location.hash = s;
-        setTimeout(loop, 4);
-    }
-    loop();
-</script>
+<!--<script>-->
+<!--    function loop() {-->
+<!--        var i, n, s = '';-->
+<!--        for (i = 0; i < 10; i++) {-->
+<!--            n = Math.floor(Math.sin((Date.now()/200) + (i/2)) * 4) + 4;-->
+<!--            s += String.fromCharCode(0x2581 + n);-->
+<!--        }-->
+<!--        window.location.hash = s;-->
+<!--        setTimeout(loop, 4);-->
+<!--    }-->
+<!--    loop();-->
+<!--</script>-->
 <div id="colorlib-page">
   <a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle"><i></i></a>
 
