@@ -39,13 +39,19 @@ $db = new Database();
 
             <?$arr_work = $db->getRows("SELECT * FROM `work` WHERE `status` = ? ORDER BY `sort` ASC",[1]);
             foreach ($arr_work as $work){
-                $work_new = str_replace('https://www.youtube.com/watch?v=', '', $work['link']);
-                $work_img = '//img.youtube.com/vi/'.$work_new.'/maxresdefault.jpg'
-
+                $work_name = str_replace('https://www.youtube.com/watch?v=', '', $work['link']);
+                $work_img = './image_cache/'.$work_name.'.jpg';
+                if (file_exists($work_img)) {
+                    $work_img = './image_cache/'.$work_name.'.jpg';
+                } else {
+                    copy('http://img.youtube.com/vi/'.$work_name.'/maxresdefault.jpg','./image_cache/'.$work_name.'.jpg');
+                    $work_img = '//img.youtube.com/vi/'.$work_name.'/maxresdefault.jpg';
+                }
             ?>
 
             <div class="col-md-4 ftco-animate">
-                <a href="//www.youtube.com/embed/<?=$work_new?>?version=3" data-rel="lightcase" class="photography-entry img image d-flex justify-content-center align-items-center" style="background-image: url(<?=$work_img?>);">
+                <a href="//www.youtube.com/embed/<?=$work_name?>?version=3" data-rel="lightcase" class="photography-entry img image d-flex justify-content-center align-items-center" style="background-image: url(<?=$work_img?>);">
+                    <?unset($work_img);?>
                     <div class="overlay"></div>
                     <div class="text text-center">
                         <h3><?=$work['name']?></h3>
