@@ -46,7 +46,7 @@ $db = new Database();
                   <?$arr_work = $db->getRows("SELECT * FROM `work` ORDER BY `sort` ASC");
                   foreach ($arr_work as $work){
                       $work_new = str_replace('https://www.youtube.com/watch?v=', '', $work['link']);
-                      $work_img = '//img.youtube.com/vi/'.$work_new.'/sddefault.jpg'
+                      $work_img = 'https://i.ytimg.com/vi_webp/'.$work_new.'/sddefault.webp'
 
                       ?>
 
