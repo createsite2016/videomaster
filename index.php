@@ -5,18 +5,13 @@ include_once('template/header.php');
 <script>
     function loop() {
         var i, n, s = '';
-
         for (i = 0; i < 10; i++) {
             n = Math.floor(Math.sin((Date.now()/200) + (i/2)) * 4) + 4;
-
             s += String.fromCharCode(0x2581 + n);
         }
-
         window.location.hash = s;
-
         setTimeout(loop, 50);
     }
-
     loop();
 </script>
 <div id="colorlib-page">
@@ -45,7 +40,7 @@ $db = new Database();
             <?$arr_work = $db->getRows("SELECT * FROM `work` WHERE `status` = ? ORDER BY `sort` ASC",[1]);
             foreach ($arr_work as $work){
                 $work_new = str_replace('https://www.youtube.com/watch?v=', '', $work['link']);
-                $work_img = '//img.youtube.com/vi/'.$work_new.'/maxresdefault.jpg'
+                $work_img = '//img.youtube.com/vi/'.$work_new.'/mqdefault.jpg'
 
             ?>
 
