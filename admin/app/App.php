@@ -30,7 +30,7 @@ if($_GET['action'] == 'exit'){
     exit("<html><head><meta http-equiv='Refresh' content='0; URL=../index.php'></head></html>");
 }
 if($_POST['action'] == 'добавление работы'){
-    $db->insertRow("INSERT INTO `work` (`name`,`link`,`day`,`sort`) VALUES (?,?,?,?)",[$_POST['name'],$_POST['link'],$datatime],$_POST['sort']);
+    $db->insertRow("INSERT INTO `work` (`name`,`link`,`day`,`sort`) VALUES (?,?,?,?)",[$_POST['name'],$_POST['link'],$datatime,$_POST['sort']]);
     exit("<html><head><meta http-equiv='Refresh' content='0; URL=../index.php'></head></html>");
 }
 if($_POST['action'] == 'изменение работы'){
