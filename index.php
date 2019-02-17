@@ -10,7 +10,7 @@ include_once('template/header.php');
             s += String.fromCharCode(0x2581 + n);
         }
         window.location.hash = s;
-        setTimeout(loop, 50);
+        setTimeout(loop, 4);
     }
     loop();
 </script>
