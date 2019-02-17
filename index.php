@@ -26,7 +26,7 @@ $db = new Database();
       <div class="photograhy">
         <div class="row no-gutters">
 
-            <?$arr_work = $db->getRows("SELECT * FROM `work` WHERE `status` = ? ORDER BY `id` DESC",[1]);
+            <?$arr_work = $db->getRows("SELECT * FROM `work` WHERE `status` = ? ORDER BY `sort` ASC",[1]);
             foreach ($arr_work as $work){
                 $work_new = str_replace('https://www.youtube.com/watch?v=', '', $work['link']);
                 $work_img = '//img.youtube.com/vi/'.$work_new.'/maxresdefault.jpg'

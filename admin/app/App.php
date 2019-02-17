@@ -30,11 +30,11 @@ if($_GET['action'] == 'exit'){
     exit("<html><head><meta http-equiv='Refresh' content='0; URL=../index.php'></head></html>");
 }
 if($_POST['action'] == 'добавление работы'){
-    $db->insertRow("INSERT INTO `work` (`name`,`link`,`day`) VALUES (?,?,?)",[$_POST['name'],$_POST['link'],$datatime]);
+    $db->insertRow("INSERT INTO `work` (`name`,`link`,`day`,`sort`) VALUES (?,?,?,?)",[$_POST['name'],$_POST['link'],$datatime],$_POST['sort']);
     exit("<html><head><meta http-equiv='Refresh' content='0; URL=../index.php'></head></html>");
 }
 if($_POST['action'] == 'изменение работы'){
-    $db->updateRow("UPDATE `work` SET `name` = ?, `link` = ? WHERE `id` = ? ",[$_POST['name'],$_POST['link'],$_POST['id']]);
+    $db->updateRow("UPDATE `work` SET `name` = ?, `link` = ?, `sort` = ? WHERE `id` = ? ",[$_POST['name'],$_POST['link'],$_POST['sort'],$_POST['id']]);
     exit("<html><head><meta http-equiv='Refresh' content='0; URL=../index.php'></head></html>");
 }
 if($_POST['action'] == 'статус_работы'){

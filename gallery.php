@@ -43,7 +43,7 @@ $db = new Database();
       <section class="ftco-section-2">
           <div class="photograhy">
               <div class="row no-gutters">
-                  <?$arr_work = $db->getRows("SELECT * FROM `work` ORDER BY `id` DESC");
+                  <?$arr_work = $db->getRows("SELECT * FROM `work` ORDER BY `sort` ASC");
                   foreach ($arr_work as $work){
                       $work_new = str_replace('https://www.youtube.com/watch?v=', '', $work['link']);
                       $work_img = '//img.youtube.com/vi/'.$work_new.'/maxresdefault.jpg'

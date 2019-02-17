@@ -33,15 +33,16 @@ include_once 'vendor/showdata_forpeople.php';
                 <thead>
                   <tr>
                     <th width="20px">Обложка</th>
+                    <th width="10px">Порядок</th>
+                    <th width="20px">Изменить</th>
                     <th>Название работы</th>
                     <th>Дата</th>
-                    <th width="30px">Изменить</th>
                   </tr>
                 </thead>
                 <tbody>
 
                 <?
-                $arr_work = $db->getRows("SELECT * FROM `work`");
+                $arr_work = $db->getRows("SELECT * FROM `work` ORDER BY `sort` ASC");
                 foreach ($arr_work as $work){?>
                     <tr>
                         <script>
@@ -60,8 +61,7 @@ include_once 'vendor/showdata_forpeople.php';
                         <td>
                             <a onclick="set_status<?=$work['id']?>();" href="#" <?if($work['status']=='1'){?>class="active"<?}?> data-toggle="class"><i class="icon-ok icon-large text-success text-active"></i><i class="icon-remove icon-large text-danger text"></i></a>
                         </td>
-                        <td><a href="<?=$work['link']?>" target="_blank"><?=$work['name']?></a></td>
-                        <td><?=date_smart($work['day'])?></td>
+                        <td><?=$work['sort']?></td>
                         <td class="text-right">
                             <div class="btn-group">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-pencil"></i></a>
@@ -72,6 +72,8 @@ include_once 'vendor/showdata_forpeople.php';
                                 </ul>
                             </div>
                         </td>
+                        <td><a href="<?=$work['link']?>" target="_blank"><?=$work['name']?></a></td>
+                        <td><?=date_smart($work['day'])?></td>
                     </tr>
                 <?}
                 ?>
@@ -104,8 +106,12 @@ include_once 'vendor/showdata_forpeople.php';
                 </div>
                 <div class="modal-body">
                     <div class="block">
-                        <label class="control-label">Название</label>
+                        <label class="control-label">Порядок</label>
                         <input type="hidden" name="action" value="добавление работы">
+                        <input type="text" name="sort" class="form-control" placeholder="Порядок вывода работ" value="1">
+                    </div>
+                    <div class="block">
+                        <label class="control-label">Название</label>
                         <input type="text" name="name" class="form-control" placeholder="Название работы как она будет отображаться на сайте">
                     </div>
                     <div class="block">
@@ -135,6 +141,10 @@ include_once 'vendor/showdata_forpeople.php';
                         <h4 class="modal-title" id="myModalLabel">Изменить данные о работе</h4>
                     </div>
                     <div class="modal-body">
+                        <div class="block">
+                            <label class="control-label">Порядок</label>
+                            <input type="text" name="sort" class="form-control" placeholder="Порядок вывода работ" value="<?=$update_work['sort']?>">
+                        </div>
                         <div class="block">
                             <label class="control-label">Название</label>
                             <input type="hidden" name="action" value="изменение работы">
