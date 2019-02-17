@@ -3,4 +3,5 @@
 .idea/vcs.xml
 .idea/php.xml
 .idea/modules.xml
+/admin/vendor/Database.php
 admin/vendor/Database.php
