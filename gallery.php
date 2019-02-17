@@ -11,6 +11,9 @@ include_once('template/header.php');
 include_once('template/menu.php');
 // Подключаю человекопонятную функцию вывода даты
 include_once 'admin/vendor/showdata_forpeople.php';
+// Обработчик изображений
+include_once 'admin/vendor/SimpleImage.php';
+$image = new SimpleImage();
 // Подключаю БД
 include_once 'admin/vendor/Database.php';
 $db = new Database();
