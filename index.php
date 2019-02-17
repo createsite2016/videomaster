@@ -40,7 +40,7 @@ $db = new Database();
             <?$arr_work = $db->getRows("SELECT * FROM `work` WHERE `status` = ? ORDER BY `sort` ASC",[1]);
             foreach ($arr_work as $work){
                 $work_new = str_replace('https://www.youtube.com/watch?v=', '', $work['link']);
-                $work_img = '//img.youtube.com/vi/'.$work_new.'/hqdefault.jpg'
+                $work_img = '//img.youtube.com/vi/'.$work_new.'/sddefault.jpg'
 
             ?>
 
