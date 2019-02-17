@@ -28,7 +28,7 @@
 <!--    <link rel="stylesheet" href="/css/icomoon.css">-->
 <!--    <link rel="stylesheet" href="/css/style.css">-->
 <!---->
-<!--      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
       <link rel="stylesheet" type="text/css" href="/css/lightcase.css">
       <script type="text/javascript" src="/js/lightcase.js"></script>
   </head>
