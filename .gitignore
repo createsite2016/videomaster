@@ -5,3 +5,4 @@
 .idea/modules.xml
 /admin/vendor/Database.php
 admin/vendor/Database.php
+/image_cache/*
