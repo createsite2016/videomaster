@@ -8,7 +8,7 @@ class Database{
 
 
     // Соединение с БД
-        public function __construct($username="root", $password="root", $host="localhost", $dbname="look", $options = []){
+        public function __construct($username = "root", $password = "root", $host="localhost", $dbname = "look", $options = []){
             $this->isConn = TRUE;
         try {
             $this->datab = new PDO("mysql:host={$host};dbname={$dbname};charset=utf8", $username, $password, $options);
