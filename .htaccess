@@ -1,5 +1,5 @@
 <ifModule mod_gzip.c>
-  gzip_comp_level 7;
+  gzip_comp_level 9;
   mod_gzip_on Yes
   mod_gzip_dechunk Yes
   mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
