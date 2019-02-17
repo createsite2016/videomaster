@@ -55,7 +55,7 @@ $db = new Database();
                       } else {
                           copy('http://img.youtube.com/vi/'.$work_name.'/maxresdefault.jpg','./image_cache/'.$work_name.'.jpg');
                           $image->load('./image_cache/'.$work_name.'.jpg');
-                          $image->scale(50);
+                          $image->scale(30);
                           $image->save('./image_cache/'.$work_name.'.jpg');
                           $work_img = '//img.youtube.com/vi/'.$work_name.'/maxresdefault.jpg';
                       }
