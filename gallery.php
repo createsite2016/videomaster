@@ -51,6 +51,9 @@ $db = new Database();
                           $work_img = './image_cache/'.$work_name.'.jpg';
                       } else {
                           copy('http://img.youtube.com/vi/'.$work_name.'/maxresdefault.jpg','./image_cache/'.$work_name.'.jpg');
+                          $image->load('./image_cache/'.$work_name.'.jpg');
+                          $image->resizeToWidth(600);
+                          $image->save('./image_cache/'.$work_name.'.jpg');
                           $work_img = '//img.youtube.com/vi/'.$work_name.'/maxresdefault.jpg';
                       }
                       ?>
