@@ -33,7 +33,7 @@ include_once 'vendor/showdata_forpeople.php';
                 <thead>
                   <tr>
                     <th width="10px">На главной</th>
-                    <th width="10px">Порядок</th>
+                    <th width="20px">Порядок</th>
                     <th width="20px">Изменить</th>
                     <th>Название работы</th>
                     <th>Дата</th>
