@@ -24,7 +24,7 @@ echo $arr_script['vk_script'];
          <div class="ftco-footer-widget mb-4">
           <h2 class="ftco-heading-2">Несколько свежих работ</h2>
           <ul class="list-unstyled categories">
-              <?$arr_work = $db->getRows("SELECT * FROM `work` ORDER BY `id` DESC LIMIT 5");
+              <?$arr_work = $db->getRows("SELECT * FROM `work` ORDER BY `sort` ASC LIMIT 5");
               foreach ($arr_work as $work) {
                   $work_new = str_replace('https://www.youtube.com/watch?v=', '', $work['link']);
                   ?>
