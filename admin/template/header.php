@@ -36,7 +36,7 @@ if(!$_SESSION['user']['login'] & !$_SESSION['user']['password']){
         <ul class="dropdown-menu">
           <li><a href="/admin/settings.php">Настройки</a></li>
           <li class="divider"></li>
-          <li><a href="/admin/app/app.php?action=exit">Выйти</a></li>
+          <li><a href="/admin/app/App.php?action=exit">Выйти</a></li>
         </ul>
       </li>
     </ul>
