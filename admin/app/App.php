@@ -117,8 +117,8 @@ WHERE `id` = 1 ",[
     exit("<html><head><meta http-equiv='Refresh' content='0; URL=../settings.php?error=false'></head></html>");
 }
 if($_POST['action'] == 'zayavka'){
-    //$arr_users = $db->getRow("SELECT * FROM `users`");
-    //mail($arr_users['email'], "Заявка с сайта", "Имя: ".$_POST['name']."\nСвязаться можно: ".$_POST['kontakt']."\nТекст заявки: ".$_POST['text']);
+    $arr_users = $db->getRow("SELECT * FROM `users`");
+    mail($arr_users['email'], "Заявка с сайта", "Имя: ".$_POST['name']."\nСвязаться можно: ".$_POST['kontakt']."\nТекст заявки: ".$_POST['text']);
     $db->insertRow("INSERT INTO `zayavki` (`name`,`kontakt`,`text`,`day`) VALUES (?,?,?,?)",[$_POST['name'],$_POST['kontakt'],$_POST['text'],$datatime]);
     exit("<html><head><meta http-equiv='Refresh' content='0; URL=/contact.php?error=false'></head></html>");
 }
