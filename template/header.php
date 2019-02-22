@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <title>Съемка свадеб Гулькевичи Кропоткин Краснодар | Февральский взгляд</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <meta name="description" content="Съемка свадьбы, видео, гулькевичи, кропоткин, цены, отзывы">
     <meta name="keywords" content="свадьба, гулькевичи, съемка, кропоткин, видео">
     <meta name="yandex-verification" content="af76607e5fead0f2" />
