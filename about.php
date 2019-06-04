@@ -42,7 +42,7 @@ $db = new Database();
             <div class="hero-wrap">
                 <div class="overlay"></div>
                 <div class="d-flex">
-                    <div class="author-image text img p-md-5 ftco-animate" style="background-image: url(images/author.jpg);">
+                    <div class="author-image text img p-md-5 ftco-animate" style="background-image: url(images/author2.jpg);">
 
                     </div>
                     <div class="author-info text p-4 mt-5 mb-5 ftco-animate">
