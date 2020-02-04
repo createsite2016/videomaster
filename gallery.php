@@ -62,7 +62,7 @@ $db = new Database();
                       ?>
 
                       <div class="col-md-4 ftco-animate">
-                          <a href="//www.youtube.com/embed/<?=$work_name?>?rel=0&amp;vq=hd720" data-rel="lightcase" class="photography-entry img image d-flex justify-content-center align-items-center" style="background-image: url(<?=$work_img?>);">
+                          <a href="//www.youtube.com/embed/<?=$work_name?>?rel=0&amp;&vq=hd720" data-rel="lightcase" class="photography-entry img image d-flex justify-content-center align-items-center" style="background-image: url(<?=$work_img?>);">
                               <div class="overlay"></div>
                               <div class="text text-center">
                                   <h3><?=$work['name']?></h3>
